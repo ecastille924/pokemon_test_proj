@@ -11,19 +11,18 @@ function dropdownSelect(){
         location.reload()
     })
     console.log(sessionStorage.selection)
+    fetchType(sessionStorage.selection)
 }
 
-function fetchType() {
-    let userSelection = document.getElementById("type-select").value
+function fetchType(index) {
+    let baseurl = "https://pokeapi.co/api/v2/type/"
     let output = document.getElementById("type-info")
-    fetch("https://pokeapi.co/api/v2/type/1")
+    fetch(baseurl)
     .then(resp => resp.json())
     .then(json => 
-        console.log(json.damage_relations.double_damage_from[userSelection].name,
-            json.damage_relations.half_damage_to[userSelection].name)
-        // output.innerHTML = (json.damage_relations.double_damage_from)
+        // console.log(json.results[index]),
+        output.innerHTML = (json.results[index].name)
         )
-        console.log(userSelection)
 }
 
 
