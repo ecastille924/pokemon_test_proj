@@ -17,13 +17,14 @@ function dropdownSelect(){
 function fetchType() {
     
     let baseurl = "https://pokeapi.co/api/v2/type/"
-    let userSelectedIndex = sessionStorage.selection 
+    let userSelectedIndex = parseInt(sessionStorage.selection) + 1
     let output = document.getElementById("type-info")
     
     fetch(baseurl.concat(userSelectedIndex))
     .then(resp => resp.json())
     .then(json => 
         console.log(json.damage_relations.double_damage_from)
+        // console.log(userSelectedIndex)
         // output.innerHTML = (json.results)
         )
         // console.log(baseurl.concat(userSelectedIndex))
