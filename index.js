@@ -54,6 +54,10 @@ function fetchType() {
             pNDF.innerHTML += json.damage_relations.no_damage_from[i].name + "  "
             noDmgFrmOutput.appendChild(pNDF)
             }
+        for(let i = 0; i < json.damage_relations.no_damage_to.length; i++){
+            pNDT.innerHTML += json.damage_relations.no_damage_to[i].name + "  "
+            noDmgToOutput.appendChild(pNDT)
+            }
         typeDisplay.innerText = (userSelection.options[userSelectedIndex].innerHTML)
         }
         
