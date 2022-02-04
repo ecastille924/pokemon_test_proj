@@ -18,16 +18,20 @@ function fetchType() {
     
     let baseurl = "https://pokeapi.co/api/v2/type/"
     let userSelectedIndex = parseInt(sessionStorage.selection) + 1
-    let output = document.getElementById("type-info")
+    let output = document.getElementById("dbl-dmg-frm")
+    let p = document.createElement('p')
+    // let typeDisplay = document.getElementById("poke-type")
     
     fetch(baseurl.concat(userSelectedIndex))
     .then(resp => resp.json())
     .then(json => 
-        console.log(json.damage_relations.double_damage_from)
-        // console.log(userSelectedIndex)
-        // output.innerHTML = (json.results)
+        { 
+        for(let i = 0; i < json.damage_relations.double_damage_from.length; i++){
+            p.innerHTML += json.damage_relations.double_damage_from[i].name + "  "
+            output.appendChild(p)
+            }
+        }
         )
-        // console.log(baseurl.concat(userSelectedIndex))
 }
 
 
