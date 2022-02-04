@@ -22,8 +22,10 @@ function fetchType() {
     let dblDmgToOutput = document.getElementById("dbl-dmg-to")
     let pDDF = document.createElement('p')
     let pDDT = document.createElement('p')
-    // let typeDisplay = document.getElementById("poke-type")
-    
+    let typeDisplay = document.getElementById("poke-type")
+    let userSelection = document.getElementById("type-select")
+   
+
     fetch(baseurl.concat(userSelectedIndex))
     .then(resp => resp.json())
     .then(json => 
@@ -36,8 +38,12 @@ function fetchType() {
             pDDT.innerHTML += json.damage_relations.double_damage_to[i].name + "  "
             dblDmgToOutput.appendChild(pDDT)
             }
+        // typeDisplay.innerText = userSelection
+        typeDisplay.innerText = (userSelection.options[userSelectedIndex].innerHTML)
         }
-        )
+        
+    )
+    
 }
 
 
