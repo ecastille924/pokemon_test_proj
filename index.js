@@ -42,22 +42,44 @@ function fetchType() {
             pDDF.innerHTML += json.damage_relations.double_damage_from[i].name + "  "
             dblDmgFrmOutput.appendChild(pDDF)
             }
+            if (!json.damage_relations.double_damage_from.length){
+                pDDF.innerHTML = "n/a"
+                dblDmgFrmOutput.appendChild(pDDF)
+            }
+            
         for(let i = 0; i < json.damage_relations.double_damage_to.length; i++){
             pDDT.innerHTML += json.damage_relations.double_damage_to[i].name + "  "
             dblDmgToOutput.appendChild(pDDT)
+            }
+            if (!json.damage_relations.double_damage_to.length){
+                pDDT.innerHTML = "n/a"
+                dblDmgToOutput.appendChild(pDDT)
             }
         for(let i = 0; i < json.damage_relations.half_damage_from.length; i++){
             pHDF.innerHTML += json.damage_relations.half_damage_from[i].name + "  "
             hlfDmgFrmOutput.appendChild(pHDF)
             }
+            if (!json.damage_relations.half_damage_from.length){
+                pHDF.innerHTML = "n/a"
+                hlfDmgFrmOutput.appendChild(pHDF)
+            }
         for(let i = 0; i < json.damage_relations.no_damage_from.length; i++){
             pNDF.innerHTML += json.damage_relations.no_damage_from[i].name + "  "
             noDmgFrmOutput.appendChild(pNDF)
+            }
+            if (!json.damage_relations.no_damage_from.length){
+                pNDF.innerHTML = "n/a"
+                noDmgFrmOutput.appendChild(pNDF)
             }
         for(let i = 0; i < json.damage_relations.no_damage_to.length; i++){
             pNDT.innerHTML += json.damage_relations.no_damage_to[i].name + "  "
             noDmgToOutput.appendChild(pNDT)
             }
+            if (!json.damage_relations.no_damage_to.length){
+                pNDT.innerHTML = "n/a"
+                noDmgToOutput.appendChild(pNDT)
+            }
+        
         typeDisplay.innerText = typeHeader.charAt(0).toUpperCase() + typeHeader.slice(1)
         }
         
