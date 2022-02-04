@@ -21,9 +21,15 @@ function fetchType() {
     let dblDmgFrmOutput = document.getElementById("dbl-dmg-frm")
     let dblDmgToOutput = document.getElementById("dbl-dmg-to")
     let hlfDmgFrmOutput = document.getElementById("hlf-dmg-frm")
+    let noDmgFrmOutput =  document.getElementById("no-dmg-frm")
+    let noDmgToOutput =  document.getElementById("no-dmg-to")
+    
     let pDDF = document.createElement('p')
     let pDDT = document.createElement('p')
     let pHDF = document.createElement('p')
+    let pNDF = document.createElement('p')
+    let pNDT = document.createElement('p')
+
     let typeDisplay = document.getElementById("poke-type")
     let userSelection = document.getElementById("type-select")
    
@@ -43,6 +49,10 @@ function fetchType() {
         for(let i = 0; i < json.damage_relations.half_damage_from.length; i++){
             pHDF.innerHTML += json.damage_relations.half_damage_from[i].name + "  "
             hlfDmgFrmOutput.appendChild(pHDF)
+            }
+        for(let i = 0; i < json.damage_relations.no_damage_from.length; i++){
+            pNDF.innerHTML += json.damage_relations.no_damage_from[i].name + "  "
+            noDmgFrmOutput.appendChild(pNDF)
             }
         typeDisplay.innerText = (userSelection.options[userSelectedIndex].innerHTML)
         }
