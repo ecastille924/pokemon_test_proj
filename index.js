@@ -32,7 +32,7 @@ function fetchType() {
 
     let typeDisplay = document.getElementById("poke-type")
     let userSelection = document.getElementById("type-select")
-   
+    let typeHeader = userSelection.options[userSelectedIndex].innerHTML
 
     fetch(baseurl.concat(userSelectedIndex))
     .then(resp => resp.json())
@@ -58,7 +58,7 @@ function fetchType() {
             pNDT.innerHTML += json.damage_relations.no_damage_to[i].name + "  "
             noDmgToOutput.appendChild(pNDT)
             }
-        typeDisplay.innerText = (userSelection.options[userSelectedIndex].innerHTML)
+        typeDisplay.innerText = typeHeader.charAt(0).toUpperCase() + typeHeader.slice(1)
         }
         
     )

@@ -1,0 +1,18 @@
+body{
+    font-size: 1.3rem;
+    font-family: serif;
+    color: #333;
+    background-color: rgb(255, 248, 226);
+  }
+
+.attr-head{
+    background-color: rgb(252, 176, 148);
+    background-size:auto;
+    padding:0.5rem;
+    display: inline;
+}
+
+#type-select{
+    padding-top: 0rem;
+    
+}
