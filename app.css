@@ -1,4 +1,5 @@
 body{
+    text-align: center;
     font-size: 1.3rem;
     font-family: serif;
     color: #333;
@@ -26,4 +27,8 @@ body{
     content:"";
     display: table;
     clear:both;
+}
+
+#logo{
+    width: 18rem;
 }

@@ -14,6 +14,10 @@ function dropdownSelect(){
     fetchType(sessionStorage.selection)
 }
 
+function capFirstLetter(text){
+    text.charAt(0).toUpperCase() + text.slice(1)
+}
+
 function fetchType() {
     
     let baseurl = "https://pokeapi.co/api/v2/type/"
