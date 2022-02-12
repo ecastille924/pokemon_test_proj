@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () =>{
     dropdownSelect()
+    // dropdownSelect2()
     fetchName()
 })
 
@@ -14,6 +15,17 @@ function dropdownSelect(){
     // console.log(sessionStorage.selection)
     fetchType(sessionStorage.selection)
 }
+
+// function dropdownSelect2(){
+//     let userSelection = document.getElementById("type-select2")
+
+//     userSelection.addEventListener("change",function(){
+//         sessionStorage.setItem("selection2", userSelection.value),
+//         location.reload()
+//     })
+//     console.log(sessionStorage)
+    
+// }
 
 function capFirstLetter(text){
     text.charAt(0).toUpperCase() + text.slice(1)
