@@ -2,7 +2,16 @@ document.addEventListener("DOMContentLoaded", () =>{
     dropdownSelect()
     // dropdownSelect2()
     fetchName()
+    dispImg()
 })
+
+function dispImg(){
+    let userSelection = parseInt(sessionStorage.selection) + 1
+    let imgTag = document.getElementById("pokemon-img")
+    let imgBaseUrl = "images/"
+
+    imgTag.innerHTML = imgBaseUrl.concat(userSelection)
+}
 
 
 function dropdownSelect(){
