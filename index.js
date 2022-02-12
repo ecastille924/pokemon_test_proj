@@ -12,7 +12,6 @@ function dispImg(){
     let imgBaseUrl = "images/"
 
     imgTag.src = imgBaseUrl.concat(userSelection) + ".png"
-    
 }
 
 
