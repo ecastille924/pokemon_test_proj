@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     // dropdownSelect2()
     fetchName()
     dispImg()
+
 })
 
 function dispImg(){
@@ -10,7 +11,8 @@ function dispImg(){
     let imgTag = document.getElementById("pokemon-img")
     let imgBaseUrl = "images/"
 
-    imgTag.innerHTML = imgBaseUrl.concat(userSelection)
+    imgTag.src = imgBaseUrl.concat(userSelection) + ".png"
+    
 }
 
 
