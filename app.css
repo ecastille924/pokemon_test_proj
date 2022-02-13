@@ -19,8 +19,13 @@ body{
 }
 
 .column{
-    float: left;
-    width: 50%
+    float:left;
+    width:20%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
 }
 
 .row:after {
@@ -41,3 +46,8 @@ body{
     display:inline-block;
     justify-items: center;
 }
+
+/* #main{
+    display: flex;
+    justify-content: center;
+} */
