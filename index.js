@@ -41,17 +41,17 @@ function capFirstLetter(text){
     text.charAt(0).toUpperCase() + text.slice(1)
 }
 
-function fetchName(){
-    let baseurl = "https://pokeapi.co/api/v2/type/1"
-    let userSelectedIndex = parseInt(sessionStorage.selection) + 1
+// function fetchName(){
+//     let baseurl = "https://pokeapi.co/api/v2/type/1"
+//     let userSelectedIndex = parseInt(sessionStorage.selection) + 1
     
-    fetch(baseurl.concat(userSelectedIndex))
-    .then(resp => resp.json())
-    .then(json => {
-        // for(let i = 0; i < json.pokemon.pokemon.name.length; i++)
-        console.log(sessionStorage)
-    })
-}
+//     fetch(baseurl.concat(userSelectedIndex))
+//     .then(resp => resp.json())
+//     .then(json => {
+//         // for(let i = 0; i < json.pokemon.pokemon.name.length; i++)
+//         console.log(sessionStorage)
+//     })
+// }
 
 function fetchType() {
     let baseurl = "https://pokeapi.co/api/v2/type/"

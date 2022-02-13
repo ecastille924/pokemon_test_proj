@@ -11,6 +11,9 @@ body{
     background-size:auto;
     padding:0.2rem;
     display: inline;
+    border: solid;
+    border-width: 0.02rem;
+    border-color: #333;
 }
 
 #type-select{
@@ -45,5 +48,18 @@ body{
 #pokemon-img{
     display:inline-block;
     justify-items: center;
+}
+
+#dbl-dmg-frm, #dbl-dmg-to, #hlf-dmg-frm, #no-dmg-to, #no-dmg-frm  {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.2rem;
+}
+
+#dbl-dmg-frm {
+    background-color: rgba(255, 0, 0, .3);
+}
+
+#dbl-dmg-to{
+    background-color: rgba(0, 255, 0, .3);
 }
 
