@@ -36,3 +36,8 @@ body{
 #stat-list{
     line-height: .4rem ;
 }
+
+#pokemon-img{
+    display:inline-block;
+    justify-items: center;
+}
