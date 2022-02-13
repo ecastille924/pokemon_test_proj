@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () =>{
     dropdownSelect()
     // dropdownSelect2()
-    fetchName()
+    // fetchName()
     dispImg()
 
 })
@@ -67,6 +67,7 @@ function fetchType() {
     let pHDF = document.createElement('p')
     let pNDF = document.createElement('p')
     let pNDT = document.createElement('p')
+    let br = document.createElement('br')
 
     let typeDisplay = document.getElementById("poke-type")
     let userSelection = document.getElementById("type-select")
@@ -77,45 +78,55 @@ function fetchType() {
     .then(json => 
         { 
         for(let i = 0; i < json.damage_relations.double_damage_from.length; i++){
-            pDDF.innerHTML += json.damage_relations.double_damage_from[i].name + "  "
-            dblDmgFrmOutput.appendChild(pDDF)
+            let ddf = document.createElement('p')
+            ddf.innerHTML += json.damage_relations.double_damage_from[i].name
+            dblDmgFrmOutput.appendChild(ddf)
             }
             if (!json.damage_relations.double_damage_from.length){
-                pDDF.innerHTML = "n/a"
-                dblDmgFrmOutput.appendChild(pDDF)
+                let ddf = document.createElement('p')
+                ddf.innerHTML = "n/a"
+                dblDmgFrmOutput.appendChild(ddf)
             }
             
         for(let i = 0; i < json.damage_relations.double_damage_to.length; i++){
-            pDDT.innerHTML += json.damage_relations.double_damage_to[i].name + "  "
-            dblDmgToOutput.appendChild(pDDT)
+            let ddt = document.createElement('p')
+            ddt.innerHTML += json.damage_relations.double_damage_to[i].name
+            dblDmgToOutput.appendChild(ddt)
             }
             if (!json.damage_relations.double_damage_to.length){
-                pDDT.innerHTML = "n/a"
-                dblDmgToOutput.appendChild(pDDT)
+                let ddt = document.createElement('p')
+                ddt.innerHTML = "n/a"
+                dblDmgToOutput.appendChild(ddt)
             }
         for(let i = 0; i < json.damage_relations.half_damage_from.length; i++){
-            pHDF.innerHTML += json.damage_relations.half_damage_from[i].name + "  "
-            hlfDmgFrmOutput.appendChild(pHDF)
+            let hdf = document.createElement('p')
+            hdf.innerHTML += json.damage_relations.half_damage_from[i].name
+            hlfDmgFrmOutput.appendChild(hdf)
             }
             if (!json.damage_relations.half_damage_from.length){
-                pHDF.innerHTML = "n/a"
-                hlfDmgFrmOutput.appendChild(pHDF)
+                let hdf = document.createElement('p')
+                hdf.innerHTML = "n/a"
+                hlfDmgFrmOutput.appendChild(hdf)
             }
         for(let i = 0; i < json.damage_relations.no_damage_from.length; i++){
-            pNDF.innerHTML += json.damage_relations.no_damage_from[i].name + "  "
-            noDmgFrmOutput.appendChild(pNDF)
+            let ndf = document.createElement('p')
+            ndf.innerHTML += json.damage_relations.no_damage_from[i].name
+            noDmgFrmOutput.appendChild(ndf)
             }
             if (!json.damage_relations.no_damage_from.length){
-                pNDF.innerHTML = "n/a"
-                noDmgFrmOutput.appendChild(pNDF)
+                let ndf = document.createElement('p')
+                ndf.innerHTML = "n/a"
+                noDmgFrmOutput.appendChild(ndf)
             }
         for(let i = 0; i < json.damage_relations.no_damage_to.length; i++){
-            pNDT.innerHTML += json.damage_relations.no_damage_to[i].name + "  "
-            noDmgToOutput.appendChild(pNDT)
+            let ndt = document.createElement('p')
+            ndt.innerHTML += json.damage_relations.no_damage_to[i].name
+            noDmgToOutput.appendChild(ndt)
             }
             if (!json.damage_relations.no_damage_to.length){
-                pNDT.innerHTML = "n/a"
-                noDmgToOutput.appendChild(pNDT)
+                let ndt = document.createElement('p')
+                ndt.innerHTML = "n/a"
+                noDmgToOutput.appendChild(ndt)
             }
         
         typeDisplay.innerText = typeHeader.charAt(0).toUpperCase() + typeHeader.slice(1)
