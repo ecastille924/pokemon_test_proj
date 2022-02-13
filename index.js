@@ -61,13 +61,6 @@ function fetchType() {
     let hlfDmgFrmOutput = document.getElementById("hlf-dmg-frm")
     let noDmgFrmOutput =  document.getElementById("no-dmg-frm")
     let noDmgToOutput =  document.getElementById("no-dmg-to")
-    
-    let pDDF = document.createElement('p')
-    let pDDT = document.createElement('p')
-    let pHDF = document.createElement('p')
-    let pNDF = document.createElement('p')
-    let pNDT = document.createElement('p')
-    let br = document.createElement('br')
 
     let typeDisplay = document.getElementById("poke-type")
     let userSelection = document.getElementById("type-select")

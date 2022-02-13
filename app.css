@@ -9,7 +9,7 @@ body{
 .attr-head{
     background-color: rgb(252, 176, 148);
     background-size:auto;
-    padding:0.5rem;
+    padding:0.2rem;
     display: inline;
 }
 
@@ -31,4 +31,8 @@ body{
 
 #logo{
     width: 18rem;
+}
+
+#stat-list{
+    line-height: .4rem ;
 }
